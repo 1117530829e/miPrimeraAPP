@@ -38,7 +38,7 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCourse, setSelectedCourse] = useState("Todos");
   useEffect(() => {
-    setSearchTerm("mia");
+    setSearchTerm("");
   }, []);
 
   // Get unique courses
