@@ -89,7 +89,7 @@ export default function Home() {
               </div>
               <div>
                 <h1 className="text-4xl font-bold text-gray-800">
-                  Colegio San Martín
+                  Colegio San Martín 12
                 </h1>
                 <p className="text-lg text-gray-600 mt-2">
                   Directorio de Estudiantes
@@ -99,7 +99,6 @@ export default function Home() {
           </div>
         </div>
       </header>
-
       {/* Search and Filter Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-lg shadow-md p-6 mb-8">
@@ -235,7 +234,6 @@ export default function Home() {
           </div>
         )}
       </div>
-
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
