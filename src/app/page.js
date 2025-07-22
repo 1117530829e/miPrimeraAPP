@@ -1,5 +1,6 @@
 "use client";
 import { useState, useMemo, useEffect } from "react";
+import Image from "next/image";
 
 // Mock data for students and courses
 const studentsData = [
@@ -72,19 +73,22 @@ export default function Home() {
   }, [filteredStudents]);
 
   return (
-    <div 
-      className="min-h-screen relative"
-      style={{
-        backgroundImage: 'url("/pabloescobar.jpg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed',
-        backgroundColor: '#f3f4f6' // fallback color
-      }}
-    >
+    <div className="min-h-screen relative">
+      {/* Background Image using Next.js Image component */}
+      <div className="fixed inset-0 z-0">
+        <Image
+          src="/pabloescobar.jpg"
+          alt="Background"
+          fill
+          style={{
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
+          priority
+        />
+      </div>
       {/* Overlay for better content readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
       {/* Header */}
       <header className="bg-blue-600 text-white shadow-lg relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
