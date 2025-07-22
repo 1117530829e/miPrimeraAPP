@@ -73,13 +73,14 @@ export default function Home() {
 
   return (
     <div 
-      className="min-h-screen bg-gray-50 relative"
+      className="min-h-screen relative"
       style={{
-        backgroundImage: 'url(/pabloescobar.jpg)',
+        backgroundImage: 'url("/pabloescobar.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'fixed',
+        backgroundColor: '#f3f4f6' // fallback color
       }}
     >
       {/* Overlay for better content readability */}
