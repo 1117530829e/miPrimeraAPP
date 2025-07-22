@@ -73,22 +73,19 @@ export default function Home() {
   }, [filteredStudents]);
 
   return (
-    <div className="min-h-screen relative">
-      {/* Background Image using Next.js Image component */}
-      <div className="fixed inset-0 z-0">
-        <Image
-          src="/pabloescobar.jpg"
-          alt="Background"
-          fill
-          style={{
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
-          priority
-        />
-      </div>
+    <div
+      className="min-h-screen relative"
+      style={{
+        backgroundImage:
+          'url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "#1f2937", // fallback dark color
+      }}
+    >
       {/* Overlay for better content readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
       {/* Header */}
       <header className="bg-blue-600 text-white shadow-lg relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
