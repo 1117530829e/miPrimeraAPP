@@ -72,9 +72,20 @@ export default function Home() {
   }, [filteredStudents]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div 
+      className="min-h-screen bg-gray-50 relative"
+      style={{
+        backgroundImage: 'url(/pabloescobar.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      {/* Overlay for better content readability */}
+      <div className="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
       {/* Header */}
-      <header className="bg-white shadow-lg border-b-4 border-blue-500">
+      <header className="bg-blue-600 text-white shadow-lg relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="text-center">
             <div className="flex items-center justify-center mb-4">
@@ -100,7 +111,7 @@ export default function Home() {
         </div>
       </header>
       {/* Search and Filter Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         <div className="bg-white rounded-lg shadow-md p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Search Input */}
@@ -235,7 +246,7 @@ export default function Home() {
         )}
       </div>
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8 mt-12">
+      <footer className="bg-gray-800 text-white py-8 mt-12 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-lg font-semibold mb-2">Colegio San Martín</p>
           <p className="text-gray-400">Formando líderes del mañana</p>
